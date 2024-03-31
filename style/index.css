@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: #007bff;
+  padding: 12px 0;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 28px;
+}
+header nav ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+main table {
+  width: 100%;
+  border-collapse: collapse;
+}
+main table th,
+main table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+main table th {
+  background-color: #4caf50;
+  color: white;
+}
+
+/*# sourceMappingURL=index.css.map */
