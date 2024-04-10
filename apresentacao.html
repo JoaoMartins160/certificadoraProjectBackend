@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação - Certificadora Comum</title>
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Voltar</a></li>
+                <li><a href="#projeto">Projeto</a></li>
+                <li><a href="#implementacao">Implementação</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Apresentação ao JavaScript</h1>
+
+        <section id="introducao">
+            <h2>Introdução ao JavaScript</h2>
+            <p>JavaScript é uma linguagem de programação de alto nível que é amplamente utilizada para desenvolvimento web. Foi criada originalmente para tornar as páginas web interativas, permitindo manipulação dinâmica do conteúdo, validação de formulários, animações, entre outras funcionalidades. Com o tempo, o JavaScript expandiu seu alcance e agora é utilizado tanto no lado do cliente (navegador) quanto no lado do servidor (Node.js).</p>
+        </section>
+
+        <section id="sintaxe">
+            <h2>Sintaxe</h2>
+            <p>A sintaxe do JavaScript é semelhante à de outras linguagens de programação. Aqui estão alguns elementos básicos:</p>
+            <ul>
+                <li>Declaração de variáveis: 'var', 'let', 'const'.</li>
+                <li>Estruturas de controle: 'if', 'else', 'switch', 'for', 'while', 'do-while'.</li>
+                <li>Funções: 'function', '=>'.</li>
+                <li>Comentários: '//' para comentários de linha única, '/* */' para comentários de várias linhas.</li>
+                <li>Expressões e operadores: '+', '-', '*', '/', '==', '===', '!=', '!==', '&&', '||', entre outros.</li>
+            </ul>
+        </section>
+
+        <section id="variaveis-tipos-dados">
+            <h2>Variáveis e Tipos de Dados</h2>
+            <p>Em JavaScript, as variáveis são usadas para armazenar valores. Existem três palavras-chave para declarar variáveis: var, let e const.</p>
+            <ul>
+                <li>'var': Declara uma variável globalmente ou localmente em uma função, mas seu escopo é determinado pelo contexto de execução atual.</li>
+                <li>'let': Declara uma variável local no escopo do bloco em que é definida. Ela é restrita ao bloco, instrução ou expressão onde é definida.</li>
+                <li>'const': Declara uma constante de escopo de bloco, ou seja, seu valor não pode ser alterado após a atribuição inicial.</li>
+            </ul>
+            <p>Quanto aos tipos de dados, JavaScript é uma linguagem de tipagem dinâmica, o que significa que você não precisa declarar explicitamente o tipo de dado de uma variável antes de atribuir um valor a ela. Os tipos de dados em JavaScript incluem:</p>
+            <ul>
+                <li>Primitivos: string, number, boolean, undefined, null, symbol (adicionado no ECMAScript 6).</li>
+                <li>Objetos: objetos, arrays, funções, datas, expressões regulares, entre outros.</li>
+            </ul>
+        </section>
+
+        <section id="estruturas-funcoes">
+            <h2>Estruturas em Funções</h2>
+            <p>As funções são blocos de construção fundamentais em JavaScript que permitem a reutilização de código. Uma função pode aceitar parâmetros (ou argumentos) e retornar um valor.</p>
+            <p>Além das funções simples, você pode usar estruturas mais complexas, como:</p>
+            <ul>
+                <li>Funções aninhadas: Definir funções dentro de outras funções.</li>
+                <li>Funções de callback: Passar funções como argumentos para outras funções.</li>
+                <li>Funções de retorno de chamada: Retornar funções de outras funções.</li>
+                <li>Funções de flecha (Arrow functions): Uma sintaxe mais curta e concisa para definir funções, introduzida no ECMAScript 6.</li>
+            </ul>
+        </section>
+
+        <h1>DOM (Document Object Mode)</h1>
+
+        <section id="manipulacao-DOM">
+            <h2>Manipulação de DOM</h2>
+            <p>A manipulação do DOM (Document Object Model) é uma parte essencial do desenvolvimento da web, permitindo que os desenvolvedores interajam dinamicamente com elementos HTML, CSS e JavaScript em uma página da web. Aqui está uma explicação detalhada sobre os principais aspectos da manipulação do DOM: seleção de elementos, modificação de conteúdo e manipulação de eventos.</p>
+        </section>
+
+        <section id="selecao-elemntos">
+            <h2>Seleção de Elementos</h2>
+            <ul>
+                <li>A seleção de elementos é o processo de identificar e obter referências para elementos específicos no DOM para que possam ser manipulados programaticamente.</li>
+                <li>Existem várias maneiras de selecionar elementos no DOM, incluindo seleção por ID ('getElementById'), por classe ('getElementsByClassName', 'querySelectorAll'), por tag ('getElementsByTagName', 'querySelector'), entre outros métodos.</li>
+                <li>Por exemplo, para selecionar um elemento com o ID "exemplo", você pode usar document.getElementById('exemplo').</li>
+            </ul>
+        </section>
+
+        <section id="modificacao-conteudo">
+            <h2>Modificação de Conteúdo</h2>
+            <ul>
+                <li>A modificação de conteúdo refere-se à atualização dinâmica do conteúdo dentro dos elementos HTML.</li>
+                <li>Você pode modificar o texto, atributos ou estrutura HTML de um elemento selecionado.</li>
+                <li>Por exemplo, para alterar o texto de um elemento com ID "exemplo", você pode usar 'document.getElementById('exemplo').textContent = 'Novo texto';''.</li>
+                <li>Para modificar atributos, você pode usar 'elemento.setAttribute('atributo', 'valor')' e para remover um atributo 'elemento.removeAttribute('atributo')'.</li>
+                <li>Para modificar a estrutura HTML, você pode usar métodos como 'innerHTML', 'appendChild', 'removeChild', etc.</li>
+            </ul>
+        </section>
+
+        <section id="manipulacao-eventos">
+            <h2>Manipulação de Eventos</h2>
+            <ul>
+                <li>A manipulação de eventos permite que os desenvolvedores respondam a ações do usuário, como cliques, movimentos do mouse, pressionamentos de teclas, etc.</li>
+                <li>Você pode atribuir manipuladores de eventos a elementos específicos no DOM para executar ações quando o evento ocorrer.</li>
+                <li>Os eventos podem ser registrados usando métodos como addEventListener ou atribuindo diretamente os manipuladores de eventos às propriedades dos elementos, como 'onclick'.</li>
+                <li>Por exemplo, para executar uma função quando um botão com ID "botao" for clicado, você pode usar 'document.getElementById('botao').addEventListener('click', minhaFuncao);'.</li>
+            </ul>
+        </section>
+
+    </main>
+</body>
+</html>
