@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação - Certificadora Comum</title>
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Voltar</a></li>
+                <li><a href="#projeto">Projeto</a></li>
+                <li><a href="#implementacao">Implementação</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Introdução ao Node.js e NPM</h1>
+
+        <section id="introducao">
+            <h2>Introdução ao Node</h2>
+            <p>Node é um software baseado no interpretador V8 do Google, permitindo a execução de códigos JavaScript fora de um navegador Web, ou seja, realizar execuções server-side. Possui como principal característica a manipulação DOM, deixando as aplicaçãoes web mais interativas e dinâmicas, além de poder ser implementado com bibliotecas e módulos.</p>
+        </section>
+
+        <section id="instalacao">
+            <h2>Instalação</h2>
+            <p>Além de ser código aberto e multiplataforma, o Node entrega uma fácil utilização tanto para Windows, Linux e MacOS.</p>
+            <p>Veja mais detalhes de <a href="./instalacao-node.html">como instalar o Node</a> para explorar seus recursos.</p>
+        </section>
+
+        <section id="modulos">
+            <h2>Módulos</h2>
+            <p>São coleções de funções e objetos JavaScript que podem ser utilizados e reutilizados por outros módulos, podendo realizar interações entre suas variáveis e funções.
+            Os módulos permitem compartilhamento de código dentro da aplicação JavaScript, podendo ser criados pelo programador ou provido de terceiros.
+            Os módulos podem ser de 3 tipos: Internos, Locais e Terceiros
+            </p>
+            <ul>
+                <li>Internos:  Módulos internos são aqueles nativos do Node, ou seja, assim que o baixamos temos esses módulos disponíveis.</li>
+                <li>Locais: Módulos locais são criados por nós durante o desenvolvimento de um projeto, dessa forma podemos reutilizar o código em diversos arquivos diferentes, bem como reutilizar em outro projeto.</li>
+                <li>Terceiros: Módulos de terceiros são pacotes criados e publicados pela comunidade e por via de regra são disponibilizados no site oficial de pacotes do Node, o NPM.</li>
+            </ul>
+
+            <h3>Exportando e importando módulos</h3>
+            <p>Para exportarmos um módulo, devemos utilizar o método module.exports a atribuirmos a ele o(s) valor(es) a serem exportados.</p>
+            <img src="./img/module-export.png" alt="">
+            <p>Dessa forma, estamos exportando "name" e "age" para serem usados publicamente por outros arquivos de código, como mostrado abaixo:</p>
+            <img src="./img/usando-modulos.png" alt="">
+            <p>Para importarmos as variáveis do módulo que está sendo exportado, usamos o require() e atribuimos a uma variável. No exemplo, 'modulo' está importando as variáveis de 'modulo1'.js'.</p>
+        </section>
+
+        <section id="sistema-de-arquivos">
+            <h2>Sistema de Arquivos</h2>
+            <p>Sistema de arquivos nada mais são do que maneiras de manipularmos arquivos através do módulo nativo fs(file system). Este possui funções, como:</p>
+            <ul>
+                <li>Ler arquivos;</li>
+                <li>Criar arquivos;</li>
+                <li>Alterar arquivos;</li>
+                <li>Renomear arquivos;</li>
+            </ul>
+            <p>Para realizarmos a leitura do conteúdo de um arquivo, utilizamos o método fs.readFile().</p>
+            <img src="./img/read-file.png" alt="">
+            <p>No exemplo acima, estamos passando uma função callback, onde será composto por 2 parâmetros: erro e dados do arquivo. Se o caminho estiver correto, o conteúdo será lido, caso contrário, irá disparar um erro.</p>
+
+            <p>Para adiconarmos um conteúdo ou criar um novo arquivo com esse conteúdo, utilizamos o método fs.writeFile().</p>
+            <img src="./img/write-file.png" alt="">
+            <p>Neste caso, um conteúdo será adiconado para um arquivo já existente, se o caminho estiver correto. Este método sobrescreve o conteúdo anteriormente escrito no arquivo. Caso o arquivo não exista, um novo será criado com esse conteúdo.</p>
+
+            <p>Para excluirmos um arquivo, utilizamos o método fs.unlink().</p>
+            <img src="./img/unlink-file.png" alt="">
+            <p>Para este método, os argumentos são: nome do arquivo e callback de erro.</p>
+
+            <p>Para renomearmos um arquivo, devemos utiliar o fs.rename().</p>
+            <img src="./img/rename-file.png" alt="">
+            <p>O método possui como argumentos: nome do arquivo, novo nome do arquivo e callback de erro.</p>
+        </section>
+
+        <h1>NPM - Node Package Manager</h1>
+        <p>NPM é o repositório oficial das publicações Node, ele funciona como um gerenciador de pacotes do Node, sendo esses disponibilizados para desenvolvedores.</p>        
+        <section id="instalacao-NPM">
+            <h2>Instalação de Pacotes</h2>
+            <p>O NPM vem junto com a instalação do Node. Para realizar a instalação do NPM juntamente ao Node.js <a href="/instalacao-node.html">clique aqui</a>.
+            Para certificar que o Node está instalado, basta abrir o Prompt de Comando e digitar o comando: npm --version.</p>
+            <img src="/img/versao-npm.png" alt="">
+            <p>Apresentando a versão do NPM, está tudo certo e o gerenciador está instalado na máquina.</p>
+        </section>
+
+        <section id="gerenciamento-de-depencias">
+            <h2>Gerenciamento de dependências</h2>
+            <p>Em uma aplicação back-end sempre trabalhamos com as dependências, sejam elas para criação de servidores, templates ou outras utilidades.
+            Para usarmos uma dependência NPM, devemos digitar o comando com a devida sintaxe:
+            </p>
+
+            <p>npm install (nome-da-dependência)</p>
+            <img src="./img/instalacao-express.png" alt="">
+            <p>Neste exemplo, estamos instalando o Express, framework usado para criação de servidor.</p>
+            <img src="./img/depedencia-express.png" alt="">
+            <p>Ao ser instalado uma dependência, será criado o Package.json, um arquivo que armazena todas as dependências com suas respectivas versões em objeto JSON.
+            Além disso, também é adicionado uma pasta com o nome 'node-modules', contendo todos os códigos fontes da dependência instalada.
+            </p>
+            <p>Por convenção, iniciamos um projeto com o comando 'npm init-y', onde criará um formulário contendo informações sobre o projeto como nome, versão, descrição e arquivo principal.</p>
+            <img src="./img/npm-init.png" alt="">
+            <p>Aqui está um exemplo da instalação das 3 dependências do Express, Nodemon e Body-Parser e como fica descrito no Package.json.</p>
+            <img src="./img/npm-init-dependencias.png" alt="">
+            <p>Há diversas outras dependências disponíveis, afinal, o NPM foi criado para deixar os códigos mais robustos e dinâmicos. Cabe ao desenvolvedor saber selecionar os pacotes ideais para o projeto ou aplicação WEB em que ele construirá.</p>
+        </section>
+    </main>
+</body>
+</html>

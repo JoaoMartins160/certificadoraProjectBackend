@@ -24,6 +24,11 @@ header nav ul li a:hover {
   text-decoration: underline;
 }
 
+img {
+  margin: 0% 25%;
+  width: 50%;
+}
+
 main {
   padding: 20px;
 }

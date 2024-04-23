@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação - Certificadora Comum</title>
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/node.html">Voltar</a></li>
+                <li><a href="#projeto">Projeto</a></li>
+                <li><a href="#implementacao">Implementação</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Como instalar o Node.js no Windows, Linux e macOS</h1>
+        <p>Para a instalação do Node, começaremos acessando a <a href="https://nodejs.org/en/download/">página de download do Node.js.</a></p>
+
+        <h3>Instalação no Windows</h3>
+
+        <p>Estaremos utilizando a versão LTS (Long-term support, ou suporte de longo prazo, em português), por ser mais estável. Versões Current podem apresentar bugs, por estarem em desenvolvimento.</p>
+        <img src="./img/instalacao-node-windows.png" alt="instalacao">
+        <p>Clicando na opção Download Node.js v20.12.2, será iniciado o download automático do pacote instalador, como está representado na imagem abaixo:</p>
+        
+        <img src="./img/node-baixado.png" alt="baixado">
+        <p>Ao ser concluído o download, basta clicar no instalador que foi baixado para executá-lo. A imagem abaixo será exibida e prosseguiremos clicando em Next:</p>
+        
+        <img src="./img/node-setup.png" alt="setup">
+        <p>Depois de clicado em Next, será exibida os termos de licença. Basta clicar no checkbox concordando com os termos e depois em Next.</p>
+        
+        <img src="./img/licencas-node.png" alt="licencas">
+        <p>Após ter clicado em Next, na tela seguinte aparecerá o local onde o Node será instalado. Vamos optar pelo caminho padrão.</p>
+        
+        <img src="./img/arquivo-destino-node.png" alt="destino">
+        <p>Selecione Next e na tela seguinte escolheremos as funcionalidades do Node para serem instaladas. Recomenda-se que sejam todas instaladas, sem alteração.</p>
+
+        <img src="./img/ferramentas-node.png" alt="ferramentas">
+        <p>Em seguida, vai aparecer a opção de instalar as ferramentas para módulos nativos. Vamos selecionar a checkbox para que seja feita a instalação automática das ferramentas nativas, inclusive do Chocolatey, que é um gerenciador de pacotes para o Windows que vem para facilitar o processo de atualização e download dessas ferramentas através da linha de comando. Em seguida clicamos em Next:</p>
+
+        <img src="./img/modulos-nativos-node.png" alt="modulos">
+        <p>Basta agora clicarmos em Install, que aparecerá na tela o precesso de instalação. Pronto, seu Node está instalado. Para garantir que a instalação esteja bem sucedida e que foi escrito corretamente no PATH, é interessante reiniciar a máquina. Tenha certeza que a instalação terminou antes de reiniciar o sistema.</p>
+        <p>Por fim, para averiguar se a instalação ocorreu de forma correta, abra o Prompt de Comando e digite os seguintes comandos:</p>
+        <ul>
+            <li>node --version;</li>
+            <li>npm --version.</li>
+        </ul>
+        <p>Esses que, por sua vez, irão apresentar as respectivas versões do Node e NPM instalados na máquina, conforme a imagem abaixo:</p>
+        <img src="./img/versoes-node-windows.png" alt="versoes">
+        <p>Assim, concluímos a instalação do Node.js em um Sistema Operacional Windows.</p>
+
+        <h3>Instalação no Linux (Ubuntu)</h3>
+        <p>Para instalação do Node.js versão LTS no Linux Ubuntu, deve-se digitar os seguintes comandos:</p>
+        <ul>
+            <li>curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -</li>
+            <li>sudo apt-get install -y nodejs</li>
+        </ul>
+        <p>Depois de rodar os comandos, a tela ficará dessa forma:</p>
+        <img src="./img/instalacao-node-linux.png" alt="">
+
+        <p>Com essa ação, o Node está instalado. Para certifcar sua instalação, digite os mesmos comandos anteriormente citados:</p>
+        <ul>
+            <li>node --version;</li>
+            <li>npm --version.</li>
+        </ul>
+        <p>Irá então aparecer as devidas versões do Node e NPM, respectivamente:</p>
+        <img src="./img/versoes-node-linux.png" alt="">
+        <p>Pronto! concluímos a instalação do Node para o Sistema Operaional Linux.</p>
+
+        <h3>Instalação no macOS</h3>
+        <p>Para instalarmos o Node no macOS, o processo é bem similar ao do Windows, pois utiliza pacotes para instalação.</p>
+        <img src="./img/instalacao-node-macos.png" alt="">
+
+        <p>Ao selecionar a opção, o instalador será baixado e, ao clicar, iremos executar. Clicaremos em Continue, lembre-se de aceitar os termos de uso.</p>
+        <img src="./img/termos-macos.png" alt="">
+        <p>Após clicar em Continue, teremos a seguinte tela:</p>
+        <img src="./img/node-baixado-macos.png" alt="">
+        <p>Agora, clicaremos em Close e iremos conferir se o Node e o NPM foram instalados corretamente. Os comandos são os mesmos:</p>
+        <ul>
+            <li>node --version;</li>
+            <li>npm --version.</li>
+        </ul>
+        <p>Posteriormente, aparecerá as versões do Node e NPM, respectivamente, instalados.</p>
+        <img src="./img/versoes-node-macos.png" alt="">
+        <p>Pronto! Seu Node.js está devidamente instalado para o Sistema Operacional macOS.</p>
+    </main>
+</body>
+</html>
