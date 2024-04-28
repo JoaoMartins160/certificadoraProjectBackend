@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação - Certificadora Comum</title>
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Voltar</a></li>
+                <li><a href="#projeto">Projeto</a></li>
+                <li><a href="#implementacao">Implementação</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Express e Roteamento</h1>
+
+        <p>Dentre os mais diversificados frameworks web, o Express é um dos mais aplicados em ambientes back-end.
+            Sua função é servir como criação de servidores, unindo meios de comunicação a partir de rotas constituídas por parâmetros
+            de entrada e saída.
+        </p>
+        <section id="configuracoes">
+            <h2>Configurações</h2>
+            <p>Para configurarmos o Express, é preciso realizar a instalação do <a href="/instalacao-node.html">Node/NPM</a>,
+            para assim podermos usufruir de seus recursos. Para iniciarmos, vamos escreveremos o comando apresentado abaixo:
+            </p>
+            <img src="/img/express/npm-init.png" alt="">
+            <p>Ao realizarmos o npm init, será criado o package.json, com informações do projeto. Após, digitaremos o seguinte comando para instalar o Express: </p>
+            <img src="/img/node/instalacao-express.png" alt="">
+            <p>Após, será criado o arquivo package.json com o framework juntamente com a sua versão:</p>
+            <img src="/img/express/npm-express.png" alt="">
+            <p>Assim, teremos essa configuração da lista das informações do projeto e suas dependências</p>
+        </section>
+
+        <section id="roteamento-de-url">
+            <h2>Roteamento de URLs</h2>
+            <p>Roteamentos referem-se como os endpoints de uma aplicação respondem às requisições do cliente.
+                Rotas são métodos que correspondem ao HTTP especificado. Alguns exemplos como: </p>
+                <ul>
+                    <li>app.get(): para lidar com requisições tipo GET;</li>
+                    <li>app.post(): para lidar com requisições tipo POST;</li>
+                    <li>app.all(): lida com todos os métodos;</li>
+                    <li>app.use(): expecifica middlewares como funções callback.</li>
+                </ul>
+            <img src="/img/express/roteamento.png" alt="">
+            <p>Neste exemplo, estamos utilizando a rota raiz ('/') para apresentar o conteúdo em res.send. 
+               Quando especificamos a rota, podemos apresentar um outro conteúdo na página.
+               Em suma, pedido de URL é simplesmente uma URL que um usuário digita em seu navegador para encontrar uma página em seu site.
+            </p>
+            <p>Um exemplo: quando digitamos https://ge.globo.com/futebol/brasileirao-serie-a/, seremos direcionados para a página do Globo Esporte
+               sobre futebol, acessando a tabela do Brasileirão da Série A. Assim, descrevemos uma rota de URL para sermos direcionados a um local 
+               em específico onde queremos chegar.
+            </p>
+        </section>
+
+        <h1>Rotamento avançado</h1>
+
+        <section id="parametros-de-rota">
+            <h2>Parâmetros de rota</h2>
+            <p>Para acessarmos determinados endereços web, usamos parâmetros de rota. Estes servem como um "filtro" para especificarmos
+                informações, afim de chegarmos na página web desejada. 
+            </p>
+            <img src="/img/express/parametros-rota.png" alt="">
+            <p>Temos aqui dois tipos de rota (fora o raiz '/'), onde 'saudacao' e 'saudacao/dia' terão resultados distintos, de acordo
+               com a resposta apresentada para ambos individualmente. Note que cada parâmetro de rota é dividido por barra (/), assim podemos
+               adicionar ou excluir parâmetros para chegarmos a um certo objetivo.
+            </p>
+            <img src="/img/express/rota-saudacao.png" alt="">
+            <p>Neste exemplo, ao escrevermos '/saudacao', será apresentado a mensagem dada por res.send().</p>
+            <img src="/img/express/rota-saudacao-dia.png" alt="">
+            <p>Por outro lado, caso escrevemos '/saudacao/dia', estamos adicionando mais um parâmetro para rota (dia), logo, a mensagem será conforme foi definida.</p>
+        <section id="middlewares">
+            <h2>Middlewares</h2>
+            <p>Middlewares nada mais são do que padrões na construção de uma aplicação com Express.
+                São constituídos por dois parâmetros: requisição e resposta (req e res) e um terceiro que, em algumas ocasiões, é opcional (next):
+            </p>
+            <ul>
+                <li>Requisição: Parâmetros e dados a serem enviados pelo usuário;</li>
+                <li>Resposta: Resultado dos valores e informações passadas pelo usuário;</li>
+                <li>Next: Chama a próxima função assim que a atual for realizada com sucesso, considerado parâmetro opcional.</li>
+            </ul>
+            <img src="/img/express/middleware-next.png" alt="">
+            <p>Neste exemplo, chamamos a primeira função, onde a mesma irá incrementar o valor do contador e, em seguida, graças ao next(), chamamos a 
+                segunda função middleware, que irá apresentar o valor do contador incrementado em 1 toda vez que atualizamos a página.
+            </p>
+            <img src="/img/express/middleware-contador.png" alt="">
+            <p>Utilizamos a requisição para recebermos algum dado inserido pelo usuário, existem alguns meios de capturarmos esses dados e apresentarmos na página web.
+               Um dele é por req.params, onde escrevemos na própria URL o valor a ser lido, conforme o exemplo abaixo:
+            </p>
+            <img src="/img/express/req-params-middleware.png" alt="">
+            <p>Assim, ao escrevermos "clientes/32", teremos um resultado dessa forma:</p>
+            <img src="/img/express/req-params-pagina.png" alt="">
+            <p>Outra maneira seria utilizar o req.query através da consulta de dados feitas pelo usuário.</p>
+            <img src="/img/express/req-query-middleware.png" alt="">
+            <p>Ao digitarmos a URL (clientes/dados), separamos com "?" e definimos as variáveis e seus respectivos valores atribuidos com "=", separando cada uma com "&".
+               As variáveis na URL devem condizer com os nomes escritos em req.query para serem lidas na página web.</p>
+            <img src="/img/express/req-query-pagina.png" alt="">
+            <p>Por fim, o Express é formado por vários outros tipos de <a href="https://expressjs.com/en/guide/routing.html">métodos HTTP</a>
+            que podem ser utilizados a depender da necessidade. Contudo, é importante ter conhecimento na hora de construir a aplicação e escolher os
+            métodos mais adequados que possam ter melhores resultados e entregarem maiores resultados.</p>
+        </section>
+    </main>
+</body>
+</html>

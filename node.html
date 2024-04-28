@@ -44,9 +44,9 @@
 
             <h3>Exportando e importando módulos</h3>
             <p>Para exportarmos um módulo, devemos utilizar o método module.exports a atribuirmos a ele o(s) valor(es) a serem exportados.</p>
-            <img src="./img/module-export.png" alt="">
+            <img src="./img/node/module-export.png" alt="">
             <p>Dessa forma, estamos exportando "name" e "age" para serem usados publicamente por outros arquivos de código, como mostrado abaixo:</p>
-            <img src="./img/usando-modulos.png" alt="">
+            <img src="./img/node/usando-modulos.png" alt="">
             <p>Para importarmos as variáveis do módulo que está sendo exportado, usamos o require() e atribuimos a uma variável. No exemplo, 'modulo' está importando as variáveis de 'modulo1'.js'.</p>
         </section>
 
@@ -60,19 +60,19 @@
                 <li>Renomear arquivos;</li>
             </ul>
             <p>Para realizarmos a leitura do conteúdo de um arquivo, utilizamos o método fs.readFile().</p>
-            <img src="./img/read-file.png" alt="">
+            <img src="./img/node/read-file.png" alt="">
             <p>No exemplo acima, estamos passando uma função callback, onde será composto por 2 parâmetros: erro e dados do arquivo. Se o caminho estiver correto, o conteúdo será lido, caso contrário, irá disparar um erro.</p>
 
             <p>Para adiconarmos um conteúdo ou criar um novo arquivo com esse conteúdo, utilizamos o método fs.writeFile().</p>
-            <img src="./img/write-file.png" alt="">
+            <img src="./img/node/write-file.png" alt="">
             <p>Neste caso, um conteúdo será adiconado para um arquivo já existente, se o caminho estiver correto. Este método sobrescreve o conteúdo anteriormente escrito no arquivo. Caso o arquivo não exista, um novo será criado com esse conteúdo.</p>
 
             <p>Para excluirmos um arquivo, utilizamos o método fs.unlink().</p>
-            <img src="./img/unlink-file.png" alt="">
+            <img src="./img/node/unlink-file.png" alt="">
             <p>Para este método, os argumentos são: nome do arquivo e callback de erro.</p>
 
             <p>Para renomearmos um arquivo, devemos utiliar o fs.rename().</p>
-            <img src="./img/rename-file.png" alt="">
+            <img src="./img/node/rename-file.png" alt="">
             <p>O método possui como argumentos: nome do arquivo, novo nome do arquivo e callback de erro.</p>
         </section>
 
@@ -82,7 +82,7 @@
             <h2>Instalação de Pacotes</h2>
             <p>O NPM vem junto com a instalação do Node. Para realizar a instalação do NPM juntamente ao Node.js <a href="/instalacao-node.html">clique aqui</a>.
             Para certificar que o Node está instalado, basta abrir o Prompt de Comando e digitar o comando: npm --version.</p>
-            <img src="/img/versao-npm.png" alt="">
+            <img src="/img/node/versao-npm.png" alt="">
             <p>Apresentando a versão do NPM, está tudo certo e o gerenciador está instalado na máquina.</p>
         </section>
 
@@ -93,16 +93,16 @@
             </p>
 
             <p>npm install (nome-da-dependência)</p>
-            <img src="./img/instalacao-express.png" alt="">
+            <img src="./img/node/instalacao-express.png" alt="">
             <p>Neste exemplo, estamos instalando o Express, framework usado para criação de servidor.</p>
-            <img src="./img/depedencia-express.png" alt="">
+            <img src="./img/node/depedencia-express.png" alt="">
             <p>Ao ser instalado uma dependência, será criado o Package.json, um arquivo que armazena todas as dependências com suas respectivas versões em objeto JSON.
             Além disso, também é adicionado uma pasta com o nome 'node-modules', contendo todos os códigos fontes da dependência instalada.
             </p>
             <p>Por convenção, iniciamos um projeto com o comando 'npm init-y', onde criará um formulário contendo informações sobre o projeto como nome, versão, descrição e arquivo principal.</p>
-            <img src="./img/npm-init.png" alt="">
+            <img src="./img/node/npm-init-dependencias.png" alt="">
             <p>Aqui está um exemplo da instalação das 3 dependências do Express, Nodemon e Body-Parser e como fica descrito no Package.json.</p>
-            <img src="./img/npm-init-dependencias.png" alt="">
+            <img src="./img/node/dependencias.png" alt="">
             <p>Há diversas outras dependências disponíveis, afinal, o NPM foi criado para deixar os códigos mais robustos e dinâmicos. Cabe ao desenvolvedor saber selecionar os pacotes ideais para o projeto ou aplicação WEB em que ele construirá.</p>
         </section>
     </main>
