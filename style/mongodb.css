@@ -1,0 +1,13 @@
+.container-img-instalador {
+    align-items: center;
+    width: 30em;
+    justify-content: center;
+    margin-left: 35%;
+}
+
+.container-img {
+    align-items: center;
+    margin-left: 35%;
+    width: 40em;
+    padding: 2em;
+}

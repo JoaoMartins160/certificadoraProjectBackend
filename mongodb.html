@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Web Back-End - Certificadora Comum</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+    <h1>MongoDB Tutorial</h1>
+
+    <h2>Conceitos Básicos</h2>
+    <p>
+        MongoDB é um banco de dados NoSQL orientado a documentos. Isso significa que, em vez de armazenar dados em tabelas e linhas como você faria com um banco de dados relacional, o MongoDB armazena dados em documentos BSON,
+        que são binários JSON. Esses documentos são armazenados em coleções, que são equivalentes a tabelas em um banco de dados relacional.
+    </p>
+
+    <p>
+        Diferente dos bancos de dados relacionais, os banco de dados NoSQL têm a sua estrutura para armazenamento dos dados como também a sua linguagem de consulta. Devido a isso, surgiram vários tipos de bancos de dados e cada um tem a sua forma de trabalhar. Geralmente, eles são rotulados de acordo com a forma como os dados são armazenados,
+        então vamos entender um pouquinho mais sobre estes tipos de banco de dados existentes a seguir:
+    </p>
+
+    <ul>
+        <li>Grafos - Em um banco orientado a grafos, não existem tabelas, documentos ou qualquer outra estrutura que seja comparável a uma tabela. Neste tipo de banco, tudo são nós (vértices) e relacionamentos (arestas).O mais popular deles é o Neo4j.</li>
+        <li>Chave / valor - Todos os registros fazem parte da mesma coleção de elementos. Fazendo uma comparação com os bancos de dados relacionais, é como se o banco de dados inteiro fosse uma única tabela que possui apenas duas colunas: uma chave,e uma outra com valor. Um exemplo desse tipo é o Redis.</li>
+        <li>Colunar - A estrutura principal dos bancos colunares é basicamente uma grande tabela. Cada registro pode, ter quantas e quais colunas precisar (schemaless). Os bancos de dados colunares são os que mais se assemelham aos bancos de dados relacionais por terem uma "tabela" na sua estrutura, mesmo que, na verdade, sejam muito diferentes, já que os dados estão orientados a colunas internamente. Um exemplo desse tipo é o Cassandra.</li>
+        <li>Documento - O banco de dados de estilo de documento usa o que equivale a um objeto como sua menor unidade lógica. E uma coleção pode conter vários documentos. Por não haver um esquema fixo, cada documento pode ter um número e um tipo de campo diferente, o que contribui para a flexibilidade. Um exemplo desse tipo é MongoDB.</li>
+    </ul>
+
+    <div class="container">
+        <h2>Instalação</h2>
+        <p>
+            Para realizar a instalação do MongoDB no nosso ambiente, precisamos acessar o navegador, procurar por “mongodb download” e acessar o link MongoDB Community Download.
+            Ao abrir o site, verifique se a versão selecionada é a MongoDB Community Edition, selecione a versão, o seu sistema operacional, o pacote e clique em Download para baixar o arquivo:
+        </p>
+        <img class="container-img" src="./img/mongodb/download.png" alt="MongoDB">
+        <p>Feito isso, espere o download terminar e execute o instalador.</p>
+        <img class="container-img-instalador" src="./img/mongodb/instalador.png" alt="MongoDB">
+        <p>Ao iniciar o assistente de instalação, uma janela de boas-vindas ficará disponível. Clique em next e inicie o processo.</p>
+        <img class="container-img" src="./img/mongodb/install-next.png" alt="MongoDB">
+        <p>Aceite os termos de licença, marcando a opção I accept the terms in the license agreement (eu aceito os termos do contrato de licença) e clicando em Next.</p>
+        <img class="container-img" src="./img/mongodb/install2.png" alt="MongoDB">
+        <p>Na janela seguinte, você pode escolher o tipo de configuração, que são duas opções:
+            <ul>
+                <li>Completa (recomendado para a maioria dos usuários) que instala o MongoDB e as ferramentas do MongoDB no local padrão; e
+                Personalizada, que permite especificar quais executáveis são instalados e onde.</li>
+                <li>Personalizada, que permite especificar quais executáveis são instalados e onde.</li>
+            </ul>
+            Para seguir, selecione opção Completa.
+        </p>
+        <img class="container-img" src="./img/mongodb/install3.png" alt="MongoDB">
+        <p>Nas opções de configuração de serviço, você tem as seguintes opções:</p>
+        <p>Ao marcar a opção de instalar o MongoDB como um serviço, você teria duas opções disponíveis: executar o serviço como usuário do serviço de rede (padrão) ou executar o serviço como um usuário local ou de domínio</p>
+        <p>Em nome do serviço, especifique o nome do serviço. Ele já vem com o nome padrão MongoDB, mas também é possível renomear.</p>
+        <p>Em Diretório de dados, especificamos o diretório de dados. Se o diretório não existir, o instalador criará o diretório e configurará o acesso ao diretório para o usuário do serviço</p>
+        <p>Já em Diretório de registros, especificamos o diretor de Log. Assim como no diretório de dados, se o diretório não existir, o instalador criará o diretório e configurará o acesso ao diretório para o usuário do serviço.</p>
+        <p>Você pode manter as configurações padrão e clicar no botão de Next para prosseguir com a instalação:</p>
+        <img class="container-img" src="./img/mongodb/install4.png" alt="MongoDB">
+    </div>
+
+    <h2>Uso Básico</h2>
+    <p>
+        Uma vez instalado, você pode iniciar o MongoDB a partir da linha de comando usando o comando 'mongod'. Em seguida, você pode se conectar ao servidor MongoDB usando o shell MongoDB com o comando 'mongo'. No shell MongoDB, você pode executar comandos para criar bancos de dados, inserir e recuperar dados, e assim por diante.
+    </p>
+</body>
+</html>
