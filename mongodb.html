@@ -57,11 +57,108 @@
         <p>Já em Diretório de registros, especificamos o diretor de Log. Assim como no diretório de dados, se o diretório não existir, o instalador criará o diretório e configurará o acesso ao diretório para o usuário do serviço.</p>
         <p>Você pode manter as configurações padrão e clicar no botão de Next para prosseguir com a instalação:</p>
         <img class="container-img" src="./img/mongodb/install4.png" alt="MongoDB">
-    </div>
 
-    <h2>Uso Básico</h2>
-    <p>
-        Uma vez instalado, você pode iniciar o MongoDB a partir da linha de comando usando o comando 'mongod'. Em seguida, você pode se conectar ao servidor MongoDB usando o shell MongoDB com o comando 'mongo'. No shell MongoDB, você pode executar comandos para criar bancos de dados, inserir e recuperar dados, e assim por diante.
-    </p>
+        <h2>Criação de um Banco de Dados</h2>
+        <p>
+            Uma vez instalado, você pode iniciar o MongoDB a partir da linha de comando usando o comando 'mongod'. Em seguida, você pode se conectar ao servidor MongoDB usando o shell MongoDB com o comando 'mongo'. No shell MongoDB, você pode executar comandos para criar bancos de dados, inserir e recuperar dados, e assim por diante.
+        </p>
+        <p>
+            Para este conteúdo, utilizamos para a criação de um banco de dados o serviço Mongo Atlas:
+        </p>
+        <ul>
+            <li>
+                1 - Acesse o site <a href="https://www.mongodb.com/atlas">Mongo Atlas</a> e crie uma conta, caso não possua, ou faça login. Após logar, crie uma nova organização caso seja seu primeiro acesso, com o nome que desejar (por exemplo, alura).
+            </li>
+            <li>
+                2 - Clique no botão New Project à direita da tela e dê um nome ao seu novo projeto. Clique em Next.
+            </li>
+        </ul>
+        <img class="container-img" src="./img/mongodb/create_1.png" alt="MongoDB">
+        <ul>
+            <li>
+                3 - O próximo passo é definir permissões. Você pode clicar em Create Project sem alterar nada.
+            </li>
+        </ul>
+        <img class="container-img" src="./img/mongodb/create_2.png" alt="MongoDB">
+        <ul>
+            <li>
+                4 - Na tela Create a database clique no botão Build a database para criar uma nova instância de banco de dados.
+            </li>
+        </ul>
+        <img class="container-img" src="./img/mongodb/create_3.png" alt="MongoDB">
+        <ul>
+            <li>
+                5 - Escolha a opção M0 FREE, role a tela e selecione a opção de provider AWS, região us-east-1. Em seguida, você pode dar um nome ao cluster ou manter a opção Cluster0.
+                Clique em Create.
+            </li>
+        </ul>
+        <img class="container-img" src="./img/mongodb/create_4.png" alt="MongoDB">
+        <img class="container-img" src="./img/mongodb/create_5.png" alt="MongoDB">
+        <ul>
+            <li>
+                6 - Nas opções de segurança, crie um usuário com a opção Username and Password para acesso ao banco.
+                Por exemplo, username admin e senha admin123. Clique em Create user.
+            </li>
+        </ul>
+        <img class="container-img" src="./img/mongodb/create_6.png" alt="MongoDB">
+        <ul>
+            <li>
+                7 - Na seção Where would you like to connect from? escolha My Local Environment. O IP de sua máquina já está automaticamente adicionado como IP permitido para acesso, mas para ser possível acessar livremente o banco, adicione também o IP 0.0.0.0/0 e clique em Add entry.
+                Em seguida conclua clicando em Finish and close.
+            </li>
+        </ul>
+        <img class="container-img" src="./img/mongodb/create_7.png" alt="MongoDB">
+        <ul>
+            <li>
+                8 - Clique em Go to Databases no modal para voltar para a tela principal de databases.
+            </li>
+        </ul>
+        <img class="container-img" src="./img/mongodb/create_8.png" alt="MongoDB">
+        <ul>
+            <li>
+                9 - Clique em Connect no Cluster0, que acabamos de criar.
+            </li>
+        </ul>
+        <img class="container-img" src="./img/mongodb/create_9.png" alt="MongoDB">
+        <ul>
+            <li>
+                10 - No menu Connect, escolha a opção Driver. A instalação com npm install mongodb já foi feita pois a lib do MongoDB para Node.js já está adicionada no package.json então este passo não é necessário.
+                Copie a string de conexão abaixo:
+            </li>
+        </ul>
+        <img class="container-img" src="./img/mongodb/create_10.png" alt="MongoDB">
+        <p>
+            Substitua admin: password pelos dados de username e password que você criou nos passos anteriores, por exemplo, admin:admin123. Clique em Close para fechar a janela.
+        </p>
+        <img class="container-img" src="./img/mongodb/create_11.png" alt="MongoDB">
+
+        <h2>Operações CRUD</h2>
+        <p>MongoDB é um banco de dados NoSQL orientado a documentos, o que significa que ele armazena dados em documentos BSON (uma representação binária de JSON).
+            As operações CRUD (Create, Read, Update, Delete) são as operações básicas que você pode realizar em um banco de dados MongoDB.</p>
+        <ol>
+            <li>
+                Criação (Create): No MongoDB, você pode usar o método insertOne() ou insertMany() para inserir um ou mais documentos em uma coleção. Por exemplo:
+            </li>
+        </ol>
+        <img class="container-img" src="./img/mongodb/crud_1.png" alt="MongoDB">
+        <ol>
+            <li>
+                Leitura (Read): Você pode usar o método find() para ler documentos de uma coleção. Este método retorna um cursor para os documentos que correspondem aos critérios de consulta. Por exemplo:
+            </li>
+        </ol>
+        <img class="container-img" src="./img/mongodb/crud_2.png" alt="MongoDB">
+        <ol>
+            <li>
+                Atualização (Update): O MongoDB fornece os métodos updateOne(), updateMany() e replaceOne() para atualizar documentos em uma coleção. Por exemplo:
+            </li>
+        </ol>
+        <img class="container-img" src="./img/mongodb/crud_3.png" alt="MongoDB">
+        <ol>
+            <li>
+                Exclusão (Delete): Você pode usar os métodos deleteOne() ou deleteMany() para excluir documentos de uma coleção. Por exemplo:
+            </li>
+        </ol>
+        <img class="container-img" src="./img/mongodb/crud_4.png" alt="MongoDB">
+    </div>
 </body>
 </html>
