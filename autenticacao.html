@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Web Back-End - Certificadora Comum</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+    <h1>Tokens JWT em Node.js</h1>
+    <p><strong>Conceitos Básicos:</strong></p>
+    <ul>
+        <li><strong>JWT:</strong> É uma string codificada que é enviada entre o cliente e o servidor, que pode ser validada apenas pelo servidor com uma chave secreta.</li>
+        <li><strong>Estrutura do JWT:</strong> Um token JWT é composto por três partes: Header, Payload e Signature.</li>
+        <li><strong>Header:</strong> Contém metadados sobre o tipo do token (geralmente JWT) e o algoritmo de criptografia usado.</li>
+        <li><strong>Payload:</strong> Contém as declarações (claims), que são informações sobre o usuário e outros dados necessários.</li>
+        <li><strong>Signature:</strong> É gerada pela codificação do header e do payload com a chave secreta, garantindo que o token não foi alterado.</li>
+    </ul>
+    <p><strong>Fluxo de Autenticação com JWT:</strong></p>
+    <ol>
+        <li>Login: O usuário se autentica com suas credenciais (usuário e senha).</li>
+        <li>Geração do Token: Se as credenciais estiverem corretas, o servidor gera um JWT e o envia de volta para o cliente.</li>
+        <li>Uso do Token: O cliente envia o JWT em cada requisição subsequente, geralmente no cabeçalho Authorization.</li>
+        <li>Validação: O servidor valida o token usando a chave secreta e, se válido, permite o acesso ao recurso solicitado.</li>
+    </ol>
+    <p><strong>Vantagens do Uso de JWT:</strong></p>
+    <ul>
+        <li>Stateless: O servidor não precisa manter um registro da sessão do usuário, pois todas as informações necessárias estão no token.</li>
+        <li>Segurança: A assinatura do token garante que ele não foi modificado.</li>
+        <li>Flexibilidade: Pode ser usado em diferentes domínios e plataformas.</li>
+    </ul>
+    <p><strong>Implementação em Node.js:</strong></p>
+    <p>Para implementar JWT em Node.js, você pode usar bibliotecas como jsonwebtoken para criar e verificar tokens JWT.</p>
+
+    <h2>Sessões e Tokens</h2>
+    <p>
+        Para entender o que sessões e tokens significam e suas relações com a segurança, precisamos definir esses conceitos.
+    </p>
+    <strong>Sessão</strong>
+    <ul>
+        <li>
+            Quantidade de tempo em que o usuário está autenticado e conectado a um serviço ou um sistema.
+        </li>
+    </ul>
+    <p>
+        Para demonstrar como essas sessões podem funcionar, teremos uma versão simplificada do protocolo HTTP. Mostraremos algumas respostas e requisições e pensaremos em como funciona esse protocolo e sua autenticação.
+    </p>
+    <img src="img/mongodb/token-1.png" alt="MongoDB">
+    <p>
+        Do lado esquerdo há um retângulo em azul com a imagem de um notebook que representa o usuário que quer acessar o servidor do e-mail. Do lado direito, em amarelo temos a imagem do provedor ou servidor, sendo a máquina que
+        computa as requisições e efetua as tarefas necessárias para que o usuário navegue e acesse os e-mails.
+    </p>
+    <p>Suponhamos que o usuário queira acessar o e-mail, logo a primeira coisa que ele precisa fazer é informar o login e senha. A partir disso, o servidor vai ser responsável por autenticar e verificar se esse usuário existe e se as credenciais estão corretas.</p>
+    <p>Caso tenha informado as credenciais corretas, o servidor cria um Identificador Único (ID) para notificar que o usuário está logado. Em seguida, vai guardar esse valor e enviar o ID na resposta para o usuário.</p>
+    <p>Com esse ID, a pessoa vai precisar guardar no navegador, seja por cookies ou local storage (em português, Armazenamento Local) e as requisições que ele for realizar dali para frente, vai precisar mandar esse ID para o servidor.</p>
+    <p>Dessa forma, não é preciso informar toda vez para o servidor a senha e login, com o mesmo processo de autenticação, durante um determinado tempo. Podemos apenas receber o identificador e o servidor entender que determinado ID está associado àquele usuário.</p>
+    <p>Após guardar esse ID, a pessoa pode fazer uma requisição para visualizar outro e-mail, abrir outra página ou acessar outra área. Para isso, ele envia novamente o identificador junto para garantir ser ele quem está utilizando.</p>
+    <p>O servidor precisa comparar se possui esse ID no usuário e retornar de acordo, checando se as credenciais são válidas e devolver com a resposta solicitada pela pessoa.</p>
+    <p>Essa estratégia funciona para a maioria dos casos. Porém, há aplicações que dependem de escala, que possuem bastantes bancos de dados, centros de distribuições ou dependendo da arquitetura do sistema, buscar por esse ID pode não ser uma tarefa tão simples, pode ser custosa.
+        Outro cenário menos comum é um terceiro obter o identificador e se passar pelo usuário.</p>
+    <p><strong>Token</strong></p>
+    <p>
+        Com isso, surgiu outra solução chamada Token. Em que ao invés do servidor gerar um valor, armazenar e ficar se comunicando com o usuário, é gerado como se fosse uma hash de uma determinada informação e enviado de volta para o usuário.
+    </p>
+    <p>
+        O usuário apenas aguarda essa hash, não consegue ler e não possui capacidade de utilizar. Como se fosse uma assinatura, por exemplo, que não é possível desencriptar. Quando o usuário for fazer uma requisição, ele vai mandar esse token de volta e ao invés do servidor pesquisar e localizar esse ID, ele simplesmente valida o token, ou seja, vai decifrar a informação.
+    </p>
+    <img src="img/mongodb/token-2.png" alt="MongoDB">
+    <p>Exemplificando, vamos supor que o usuário faz a requisição com login e senha. O servidor gera e devolve um token sem armazená-lo e responde com os e-mails e a primeira página do usuário com o novo token. A pessoa guarda o token e ao realizar uma próxima requisição, envia o token junto que vai ser verificado pelo servidor.</p>
+    <p>Após a validação, vai obter a resposta. Trocamos armazenamento por um tipo de processamento.</p>
+    <p><strong>Vantagens e desvantagens:</strong></p>
+    <ul>
+        <li>
+            Não precisamos mais armazenar nenhum dado, apenas validar o token. Mas ainda podemos ter problemas com o token sendo interceptado.
+        </li>
+    </ul>
+    <p>Existem vantagens e desvantagens em ter sessões em que é usado o identificador único, um token ou diversos outros tokens que existem. Não necessariamente uma dessas soluções é melhor que a outra, todas possuem vulnerabilidade relacionada à interceptação do token, assim como ocorre com o ID.</p>
+
+
+</body>
+</html>
