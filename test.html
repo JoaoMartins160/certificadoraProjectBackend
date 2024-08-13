@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apresentação de Testes</title>
+    <link rel="stylesheet" href="./style/index.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Voltar</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <h2>1. Introdução</h2>
+      <p>Definições gerais sobre Testes Unitários, de Integração e de API.</p>
+    </section>
+
+    <section>
+      <h2>2. Testes Unitários</h2>
+      <h3>Jest</h3>
+      <pre><code>
+const sum = (a, b) => a + b;
+test('adds 1 + 2 to equal 3', () => {
+  expect(sum(1, 2)).toBe(3);
+});
+    </code></pre>
+      <p><a href="https://jestjs.io/">Documentação do Jest</a></p>
+
+      <h3>Mocha & Chai</h3>
+      <pre><code>
+const { expect } = require('chai');
+const multiply = (a, b) => a * b;
+
+describe('Multiply Function', () => {
+  it('should return 4 when multiplying 2 and 2', () => {
+    expect(multiply(2, 2)).to.equal(4);
+  });
+});
+    </code></pre>
+      <p><a href="https://mochajs.org/">Documentação do Mocha</a></p>
+    </section>
+
+    <section>
+      <h2>3. Testes de Integração</h2>
+      <pre><code>
+describe('User Login', () => {
+  it('should authenticate user with correct credentials', () => {
+    const user = login('username', 'password');
+    expect(user).to.have.property('token');
+  });
+});
+    </code></pre>
+      <p>
+        <a href="https://jestjs.io/docs/testing-frameworks"
+          >Testes de Integração com Jest</a
+        >
+      </p>
+    </section>
+
+    <section>
+      <h2>4. Testes de API</h2>
+      <pre><code>
+const request = require('supertest');
+const app = require('./app');
+
+describe('GET /users', () => {
+  it('responds with json containing a list of all users', async () => {
+    const response = await request(app).get('/users');
+    expect(response.statusCode).toBe(200);
+    expect(response.body).toBeInstanceOf(Array);
+  });
+});
+    </code></pre>
+      <p>
+        <a href="https://github.com/visionmedia/supertest"
+          >Supertest para Testes de API</a
+        >
+      </p>
+    </section>
+  </body>
+</html>
