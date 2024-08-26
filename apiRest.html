@@ -14,178 +14,193 @@
         </ul>
       </nav>
     </header>
-    <h1>Introdução às APIs RESTful</h1>
-    <h2>O que é uma API?</h2>
-    <p>
-      APIs são mecanismos que permitem que dois componentes de software se
-      comuniquem usando um conjunto de definições e protocolos. Por exemplo, o
-      sistema de software do instituto meteorológico contém dados meteorológicos
-      diários. A aplicação para a previsão do tempo em seu telefone “fala” com
-      esse sistema por meio de APIs e mostra atualizações meteorológicas diárias
-      no telefone.
-    </p>
-    <h2>Como as APIs funcionam?</h2>
-    <p>
-      A arquitetura da API geralmente é explicada em termos de cliente e
-      servidor. A aplicação que envia a solicitação é chamada de cliente e a
-      aplicação que envia a resposta é chamada de servidor. Então, no exemplo do
-      clima, o banco de dados meteorológico do instituto é o servidor e o
-      aplicativo móvel é o cliente.
-    </p>
-    <img src="./img/Api's/Weather Api.jpg" alt="" />
-    <h2>O que são APIs REST?</h2>
-    <p>
-      REST significa Transferência Representacional de Estado. REST define um
-      conjunto de funções como GET, PUT, DELETE e assim por diante, que os
-      clientes podem usar para acessar os dados do servidor. Clientes e
-      servidores trocam dados usando HTTP. A principal característica da API
-      REST é a ausência de estado. A ausência de estado significa que os
-      servidores não salvam dados do cliente entre as solicitações. As
-      solicitações do cliente ao servidor são semelhantes aos URLs que você
-      digita no navegador para visitar um site. A resposta do servidor
-      corresponde a dados simples, sem a renderização gráfica típica de uma
-      página da Web.
-    </p>
-    <h2>Quais são os benefícios das APIs REST?</h2>
+    <section>
+      <h1>Introdução às APIs RESTful</h1>
+      <h2>O que é uma API?</h2>
+      <p>
+        APIs são mecanismos que permitem que dois componentes de software se
+        comuniquem usando um conjunto de definições e protocolos. Por exemplo, o
+        sistema de software do instituto meteorológico contém dados
+        meteorológicos diários. A aplicação para a previsão do tempo em seu
+        telefone “fala” com esse sistema por meio de APIs e mostra atualizações
+        meteorológicas diárias no telefone.
+      </p>
+      <h2>Como as APIs funcionam?</h2>
+      <p>
+        A arquitetura da API geralmente é explicada em termos de cliente e
+        servidor. A aplicação que envia a solicitação é chamada de cliente e a
+        aplicação que envia a resposta é chamada de servidor. Então, no exemplo
+        do clima, o banco de dados meteorológico do instituto é o servidor e o
+        aplicativo móvel é o cliente.
+      </p>
+      <img src="./img/Api's/Weather Api.jpg" alt="" />
+    </section>
+    <section>
+      <h2>O que são APIs REST?</h2>
+      <p>
+        REST significa Transferência Representacional de Estado. REST define um
+        conjunto de funções como GET, PUT, DELETE e assim por diante, que os
+        clientes podem usar para acessar os dados do servidor. Clientes e
+        servidores trocam dados usando HTTP. A principal característica da API
+        REST é a ausência de estado. A ausência de estado significa que os
+        servidores não salvam dados do cliente entre as solicitações. As
+        solicitações do cliente ao servidor são semelhantes aos URLs que você
+        digita no navegador para visitar um site. A resposta do servidor
+        corresponde a dados simples, sem a renderização gráfica típica de uma
+        página da Web.
+      </p>
+    </section>
+    <section>
+      <h2>Quais são os benefícios das APIs REST?</h2>
 
-    <ul>
-      <li>
-        Integração: As APIs são usadas para integrar novas aplicações com
-        sistemas de software existentes. Isso aumenta a velocidade de
-        desenvolvimento porque cada funcionalidade não precisa ser escrita do
-        zero. Você pode usar APIs para aproveitar o código existente.
-        <ul>
-          <li>
-            Exemplo: Um desenvolvedor pode usar a API do Google Maps para
-            integrar funcionalidades de mapeamento e geolocalização em seu
-            aplicativo sem precisar criar um sistema de mapas do zero.
-          </li>
-        </ul>
-      </li>
-      <br />
-      <li>
-        Inovação: Setores inteiros podem mudar com a chegada de uma nova
-        aplicação. As empresas precisam responder rapidamente e oferecer suporte
-        à rápida implantação de serviços inovadores. Elas podem fazer isso
-        fazendo alterações no nível da API sem precisar reescrever todo o
-        código.
-        <ul>
-          <li>
-            Exemplo: A introdução de serviços de pagamento como o PayPal ou
-            Stripe permite que sites e aplicativos integrem pagamentos online
-            rapidamente. Alterações e melhorias no serviço de pagamento podem
-            ser feitas através da API sem impacto significativo nos aplicativos
-            que a utilizam.
-          </li>
-        </ul>
-      </li>
-      <br />
-      <li>
-        Expansão: As APIs apresentam uma oportunidade única para as empresas
-        atenderem às necessidades de seus clientes em diferentes plataformas.
-        Qualquer empresa pode fornecer acesso semelhante aos seus respectivos
-        bancos de dados internos usando APIs gratuitas ou pagas.
-        <ul>
-          <br />
-          <li>
-            iFood API: Permite que restaurantes integrem seus sistemas de
-            pedidos com a plataforma iFood, facilitando a gestão de pedidos e
-            permitindo que clientes façam pedidos através do aplicativo iFood em
-            diversas plataformas, como web, Android e iOS.
-            <img src="./img/Api's/Api_Ifood.png" alt="" />
-            Aqui Esta também o link para acessar a
-            <a href="https://developer.ifood.com.br/pt-BR/">Api do Ifood</a>
-          </li>
-          <br />
-          <li>
-            Twitter/X API: Permite que desenvolvedores integrem funcionalidades
-            do Twitter em seus aplicativos, como postar tweets, seguir usuários
-            e pesquisar tweets. Isso permite que os desenvolvedores criem
-            aplicativos que interajam com a plataforma do Twitter de várias
-            maneiras.
-            <img src="./img/Api's/Api_X.png" alt="" />
-            Aqui Esta também o link para acessar a
-            <a href="https://developer.x.com/en/docs">Api do X</a>
-          </li>
-          <br />
-          <li>
-            Uber API: Permite que desenvolvedores integrem funcionalidades de
-            transporte em seus aplicativos, como solicitar uma corrida, estimar
-            tarifas e rastrear veículos em tempo real. Isso facilita a
-            integração dos serviços da Uber em diferentes plataformas e
-            dispositivos.
-            <img src="./img/Api's/API_Uber.png" alt="" />
-            Aqui Esta também o link para acessar a
-            <a href="https://developer.uber.com/docs">Api do Uber</a>
-          </li>
-        </ul>
-      </li>
-      <br />
-      <li>
-        Facilidade de manutenção: A API atua como um gateway entre dois
-        sistemas. Cada sistema é obrigado a fazer alterações internas para que a
-        API não seja afetada. Dessa forma, qualquer alteração futura de código
-        feita por uma parte não afetará a outra parte.
-      </li>
-    </ul>
-
-    <h2>Principais Conceitos de APIs RESTful:</h2>
-    <ul>
-      <li>
-        Recursos (Resources): Entidades da aplicação que podem ser acessadas via
-        API, como usuários, produtos, pedidos.
-      </li>
-      <li>
-        Identificação de Recursos: Cada recurso é identificado por um URI
-        (Uniform Resource Identifier).
-      </li>
-      <li>Métodos HTTP:</li>
       <ul>
-        <li>GET: Recuperar dados de um recurso.</li>
-        <li>POST: Criar um novo recurso.</li>
-        <li>PUT: Atualizar um recurso existente.</li>
-        <li>DELETE: Deletar um recurso.</li>
+        <li>
+          Integração: As APIs são usadas para integrar novas aplicações com
+          sistemas de software existentes. Isso aumenta a velocidade de
+          desenvolvimento porque cada funcionalidade não precisa ser escrita do
+          zero. Você pode usar APIs para aproveitar o código existente.
+          <ul>
+            <li>
+              Exemplo: Um desenvolvedor pode usar a API do Google Maps para
+              integrar funcionalidades de mapeamento e geolocalização em seu
+              aplicativo sem precisar criar um sistema de mapas do zero.
+            </li>
+          </ul>
+        </li>
+        <br />
+        <li>
+          Inovação: Setores inteiros podem mudar com a chegada de uma nova
+          aplicação. As empresas precisam responder rapidamente e oferecer
+          suporte à rápida implantação de serviços inovadores. Elas podem fazer
+          isso fazendo alterações no nível da API sem precisar reescrever todo o
+          código.
+          <ul>
+            <li>
+              Exemplo: A introdução de serviços de pagamento como o PayPal ou
+              Stripe permite que sites e aplicativos integrem pagamentos online
+              rapidamente. Alterações e melhorias no serviço de pagamento podem
+              ser feitas através da API sem impacto significativo nos
+              aplicativos que a utilizam.
+            </li>
+          </ul>
+        </li>
+        <br />
+        <li>
+          Expansão: As APIs apresentam uma oportunidade única para as empresas
+          atenderem às necessidades de seus clientes em diferentes plataformas.
+          Qualquer empresa pode fornecer acesso semelhante aos seus respectivos
+          bancos de dados internos usando APIs gratuitas ou pagas.
+          <ul>
+            <br />
+            <li>
+              iFood API: Permite que restaurantes integrem seus sistemas de
+              pedidos com a plataforma iFood, facilitando a gestão de pedidos e
+              permitindo que clientes façam pedidos através do aplicativo iFood
+              em diversas plataformas, como web, Android e iOS.
+              <br />
+              <img src="./img/Api's/Api_Ifood.png" alt="" />
+              <br />
+              Aqui Esta também o link para acessar a
+              <a href="https://developer.ifood.com.br/pt-BR/">Api do Ifood</a>
+            </li>
+            <br />
+            <li>
+              Twitter/X API: Permite que desenvolvedores integrem
+              funcionalidades do Twitter em seus aplicativos, como postar
+              tweets, seguir usuários e pesquisar tweets. Isso permite que os
+              desenvolvedores criem aplicativos que interajam com a plataforma
+              do Twitter de várias maneiras.
+              <img src="./img/Api's/Api_X.png" alt="" />
+              <br />
+              Aqui Esta também o link para acessar a
+              <a href="https://developer.x.com/en/docs">Api do X</a>
+            </li>
+            <br />
+            <li>
+              Uber API: Permite que desenvolvedores integrem funcionalidades de
+              transporte em seus aplicativos, como solicitar uma corrida,
+              estimar tarifas e rastrear veículos em tempo real. Isso facilita a
+              integração dos serviços da Uber em diferentes plataformas e
+              dispositivos.
+              <img src="./img/Api's/API_Uber.png" alt="" />
+              Aqui Esta também o link para acessar a
+              <a href="https://developer.uber.com/docs">Api do Uber</a>
+            </li>
+          </ul>
+        </li>
+        <br />
+        <li>
+          Facilidade de manutenção: A API atua como um gateway entre dois
+          sistemas. Cada sistema é obrigado a fazer alterações internas para que
+          a API não seja afetada. Dessa forma, qualquer alteração futura de
+          código feita por uma parte não afetará a outra parte.
+        </li>
       </ul>
-      <li>
-        Stateless: Cada requisição é independente e não mantém estado no
-        servidor.
-      </li>
-      <li>
-        Representações: Recursos podem ser representados em diferentes formatos,
-        como JSON ou XML, com JSON sendo o mais comum atualmente.
-      </li>
-      <li>
-        CRUD Operations: A API deve permitir operações de Create, Read, Update e
-        Delete em seus recursos.
-      </li>
-    </ul>
-    <h2>Boas Práticas de Design:</h2>
-    <ul>
-      <li>
-        Nomes de recursos devem ser substantivos e no plural: /users, /products.
-      </li>
-      <li>Versionamento da API: Inclua a versão na URI, como /api/v1/users.</li>
-      <li>Utilize os métodos HTTP adequadamente.</li>
-      <li>
-        Forneça respostas apropriadas: Use códigos de status HTTP (200, 201,
-        204, 400, 404, 500).
+    </section>
+    <section>
+      <h2>Principais Conceitos de APIs RESTful:</h2>
+      <ul>
+        <li>
+          Recursos (Resources): Entidades da aplicação que podem ser acessadas
+          via API, como usuários, produtos, pedidos.
+        </li>
+        <li>
+          Identificação de Recursos: Cada recurso é identificado por um URI
+          (Uniform Resource Identifier).
+        </li>
+        <li>Métodos HTTP:</li>
         <ul>
-          <li>
-            Existem varios sites que explicam os códigos de status HTTP, um
-            deles é o <a href="https://http.cat/">Http Cat</a> que mostra os
-            códigos de status HTTP com gatos. Existe outro com Cachorros e assim
-            por diante.
-          </li>
+          <li>GET: Recuperar dados de um recurso.</li>
+          <li>POST: Criar um novo recurso.</li>
+          <li>PUT: Atualizar um recurso existente.</li>
+          <li>DELETE: Deletar um recurso.</li>
         </ul>
+        <li>
+          Stateless: Cada requisição é independente e não mantém estado no
+          servidor.
+        </li>
+        <li>
+          Representações: Recursos podem ser representados em diferentes
+          formatos, como JSON ou XML, com JSON sendo o mais comum atualmente.
+        </li>
+        <li>
+          CRUD Operations: A API deve permitir operações de Create, Read, Update
+          e Delete em seus recursos.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+
+      <h2>Boas Práticas de Design:</h2>
+      <ul>
+        <li>
+          Nomes de recursos devem ser substantivos e no plural: /users, /products.
+        </li>
+        <li>Versionamento da API: Inclua a versão na URI, como /api/v1/users.</li>
+        <li>Utilize os métodos HTTP adequadamente.</li>
+        <li>
+          Forneça respostas apropriadas: Use códigos de status HTTP (200, 201,
+          204, 400, 404, 500).
+          <ul>
+            <li>
+              Existem varios sites que explicam os códigos de status HTTP, um
+              deles é o <a href="https://http.cat/">Http Cat</a> que mostra os
+              códigos de status HTTP com gatos. Existe outro com Cachorros e assim
+              por diante.
+            </li>
+          </ul>
       </li>
       <li>
         Documente sua API: Utilize ferramentas como Swagger ou Postman para
         documentar e testar sua API.
       </li>
+    </section>
+      <section>
 
-      <h2>Ferramentas e Links Úteis</h2>
-      <li>
-        Documentação do Fetch:
+        <h2>Ferramentas e Links Úteis</h2>
+        <li>
+          Documentação do Fetch:
         <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
           >MDN Web Docs</a
         >
@@ -196,11 +211,15 @@
       </li>
       <li>
         Swagger: Ferramenta para documentar APIs.<a href="https://swagger.io/"
-          >Swagger</a
-        >
+        >Swagger</a>
       </li>
-
       <li>
+        Insomnia: Ferramenta para testar APIs.
+        <a href="https://insomnia.rest/">Insomnia</a>
+      </section>
+
+      <section>
+
         <h2>Exemplos de APIs RESTful</h2>
         <ul>
           <li>
@@ -218,5 +237,7 @@
         </ul>
       </li>
     </ul>
+  </section>
   </body>
-</html>
+  </html>
+  
