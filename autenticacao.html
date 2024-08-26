@@ -16,6 +16,7 @@
         </nav>
       </header>
     <h1>Tokens JWT em Node.js</h1>
+    <section>
     <p><strong>Conceitos Básicos:</strong></p>
     <ul>
         <li><strong>JWT:</strong> É uma string codificada que é enviada entre o cliente e o servidor, que pode ser validada apenas pelo servidor com uma chave secreta.</li>
@@ -39,7 +40,9 @@
     </ul>
     <p><strong>Implementação em Node.js:</strong></p>
     <p>Para implementar JWT em Node.js, você pode usar bibliotecas como jsonwebtoken para criar e verificar tokens JWT.</p>
+   </section>
 
+    <section>
     <h2>Sessões e Tokens</h2>
     <p>
         Para entender o que sessões e tokens significam e suas relações com a segurança, precisamos definir esses conceitos.
@@ -53,7 +56,7 @@
     <p>
         Para demonstrar como essas sessões podem funcionar, teremos uma versão simplificada do protocolo HTTP. Mostraremos algumas respostas e requisições e pensaremos em como funciona esse protocolo e sua autenticação.
     </p>
-    <img src="img/mongodb/token-1.png" alt="MongoDB">
+    <img class="container-img" src="img/mongodb/token-1.png" alt="MongoDB">
     <p>
         Do lado esquerdo há um retângulo em azul com a imagem de um notebook que representa o usuário que quer acessar o servidor do e-mail. Do lado direito, em amarelo temos a imagem do provedor ou servidor, sendo a máquina que
         computa as requisições e efetua as tarefas necessárias para que o usuário navegue e acesse os e-mails.
@@ -73,7 +76,7 @@
     <p>
         O usuário apenas aguarda essa hash, não consegue ler e não possui capacidade de utilizar. Como se fosse uma assinatura, por exemplo, que não é possível desencriptar. Quando o usuário for fazer uma requisição, ele vai mandar esse token de volta e ao invés do servidor pesquisar e localizar esse ID, ele simplesmente valida o token, ou seja, vai decifrar a informação.
     </p>
-    <img src="img/mongodb/token-2.png" alt="MongoDB">
+    <img class="container-img" src="img/mongodb/token-2.png" alt="MongoDB">
     <p>Exemplificando, vamos supor que o usuário faz a requisição com login e senha. O servidor gera e devolve um token sem armazená-lo e responde com os e-mails e a primeira página do usuário com o novo token. A pessoa guarda o token e ao realizar uma próxima requisição, envia o token junto que vai ser verificado pelo servidor.</p>
     <p>Após a validação, vai obter a resposta. Trocamos armazenamento por um tipo de processamento.</p>
     <p><strong>Vantagens e desvantagens:</strong></p>
@@ -83,12 +86,17 @@
         </li>
     </ul>
     <p>Existem vantagens e desvantagens em ter sessões em que é usado o identificador único, um token ou diversos outros tokens que existem. Não necessariamente uma dessas soluções é melhor que a outra, todas possuem vulnerabilidade relacionada à interceptação do token, assim como ocorre com o ID.</p>
-    <h2>Implementação em NodeJS</h2>
-    <p> Para implementar JWT em Node.js, você pode usar bibliotecas como jsonwebtoken para criar e verificar tokens JWT. Aqui está um exemplo básico de como gerar um JWT</p>
-    <img src="img/mongodb/token-exemple-1.png" alt="MongoDB">
-    <p>E para verificar o token em uma requisição</p>
-    <img src="img/mongodb/token-exemple-2.png" alt="MongoDB">
+    </section>
 
+    <h2>Implementação em NodeJS</h2>
+    <section>
+    <p> Para implementar JWT em Node.js, você pode usar bibliotecas como jsonwebtoken para criar e verificar tokens JWT. Aqui está um exemplo básico de como gerar um JWT</p>
+    <img class="container-img" src="img/mongodb/token-exemple-1.png" alt="MongoDB">
+    <p>E para verificar o token em uma requisição</p>
+    <img class="container-img" src="img/mongodb/token-exemple-2.png" alt="MongoDB">
+    </section>
+
+    <section>
     <h1>Controle de acesso</h1>
     <p>O Controle de Acesso Baseado em Papéis (Role-Based Access Control - RBAC) é um método de segurança cibernética que organiza os usuários com base em seus papéis dentro da organização e estabelece permissões de acesso com base nesses papéis. Cada papel é associado a um conjunto de permissões que definem o acesso aos recursos do sistema.
         Quando um usuário é atribuído a um papel, ele herda as permissões associadas a esse papel, simplificando a administração dos direitos de acesso.</p>

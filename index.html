@@ -1,188 +1,145 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Certificadora Comum</title>
-    <link rel="stylesheet" href="./style/index.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="apresentacao.html">Apresentação</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <table>
-        <thead>
-          <tr>
-            <th>Data e Carga Horária Semanal</th>
-            <th>Aula</th>
-            <th>Integrante</th>
-            <th>Conteúdo</th>
-            <th>Situação de Entrega</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td rowspan="2">Semana 1 (08/04 - 12/04) 10h</td>
-            <td rowspan="2">
-              <a href="apresentacao.html">Fundamentos de JavaScript</a>
-            </td>
-            <td rowspan="2">Gustavo Yuusuke Yoshihara</td>
-            <td>
-              - Introdução ao JavaScript: Sintaxe, variáveis, tipos de dados,
-              estruturas e funções.
-            </td>
-            <td>Entregue</td>
-          </tr>
-          <tr>
-            <td>
-              - Manipulação do DOM: Seleção de elementos, modificação de
-              conteúdo, manipulação de eventos.
-            </td>
-            <td>Entregue</td>
-          </tr>
-          <tr>
-            <td rowspan="2">Semana 2 (15/04 - 19/04) 5h</td>
-            <td rowspan="2">
-              <a href="bancoDados.html"
-                >Fundamentos de Banco de Dados e Linguagem SQL</a
-              >
-            </td>
-            <td rowspan="2">Gustavo Yuusuke Yoshihara</td>
-            <td>
-              - Conceitos de banco de dados: Tipos de banco de dados, modelagem
-              de dados.
-            </td>
-            <td>Entregue</td>
-          </tr>
-          <tr>
-            <td>
-              - SQL básico: Consultas SELECT, inserção, atualização e exclusão
-              de dados.
-            </td>
-            <td>Entregue</td>
-          </tr>
-          <tr>
-            <td colspan="5">
-              - Será disponibilizado em código para exemplos práticos e slides,
-              visando maior integração e dinamismo.
-            </td>
-          </tr>
-          <tr>
-            <td rowspan="2">Semana 3 (22/04 - 26/04) 5h</td>
-            <td rowspan="2">
-              <a href="node.html">Introdução ao Node.js e NPM</a>
-            </td>
-            <td rowspan="2">Eduardo Affonso Kasprovicz</td>
-            <td>
-              - Introdução ao Node.js: Instalação, módulos, sistema de arquivos.
-            </td>
-            <td>Entregue</td>
-          </tr>
-          <tr>
-            <td>
-              - NPM (Node Package Manager): Instalação de pacotes, gerenciamento
-              de dependências.
-            </td>
-            <td>Entregue</td>
-          </tr>
-          <tr>
-            <td rowspan="2">Semana 4 (29/04 - 03/05) 10h</td>
-            <td rowspan="2">
-              <a href="express.html">Express.js e Roteamento</a>
-            </td>
-            <td rowspan="2">Eduardo Affonso Kasprovicz</td>
-            <td>
-              - Introdução ao Express.js: Configurações, roteamento de URLs.
-            </td>
-            <td>Entregue</td>
-          </tr>
-          <tr>
-            <td>- Roteamento avançado: Parâmetros de rota, middleware.</td>
-            <td>Entregue</td>
-          </tr>
-          <tr>
-            <td colspan="5">
-              - Será disponibilizado em código para exemplos práticos e slides,
-              visando maior integração e dinamismo.
-            </td>
-          </tr>
-          <tr>
-            <td rowspan="2">Semana 5 (06/05 - 10/05) 5h</td>
-            <td rowspan="2">
-              <a href="mongodb.html">Persistência de Dados com MongoDB</a>
-            </td>
-            <td rowspan="2">Lucas Feliciano Bassetto</td>
-            <td>- Introdução ao MongoDB: Conceitos básicos, instalação.</td>
-            <td>Entregue</td>
-          </tr>
-          <tr>
-            <td>
-              - Operações CRUD com MongoDB: Criação,leitura, atualização e
-              exclusão de documentos.
-            </td>
-            <td>Entregue</td>
-          </tr>
-          <tr>
-            <td rowspan="2">Semana 6 (13/05 - 17/05) 10h</td>
-            <td rowspan="2">
-              <a href="autenticacao.html">Autenticação e Autorização</a>
-            </td>
-            <td rowspan="2">Lucas Feliciano Bassetto</td>
-            <td>- Autenticação de usuários: Conceitos básicos, tokens JWT.</td>
-            <td>Entregue</td>
-          </tr>
-          <tr>
-            <td>
-              - Autorização de acesso: Controle de acesso baseado em papéis,
-              políticas de acesso.
-            </td>
-            <td>Entregue</td>
-          </tr>
-          <tr>
-            <td colspan="5">
-              - Será disponibilizado em código para exemplos práticos e slides,
-              visando maior integração e dinamismo.
-            </td>
-          </tr>
-          <tr>
-            <td rowspan="2">Semana 7 (20/05 - 24/05) 5h</td>
-            <td rowspan="2">
-              <a href="apiRest.html">APIs RESTful e Consumo de APIs</a>
-            </td>
-            <td rowspan="2">João Pedro Martins</td>
-            <td>- APIs RESTful: Conceitos, boas práticas de design.</td>
-            <td>Entregue</td>
-          </tr>
-          <tr>
-            <td>
-              - Consumo de APIs: Requisições HTTP, manipulação de dados JSON.
-            </td>
-            <td>Entregue</td>
-          </tr>
-          <tr>
-            <td rowspan="2">Semana 8 (27/05 - 31/05) 10h</td>
-            <td rowspan="2"><a href="test.html">Testes de Software</a></td>
-            <td rowspan="2">João Pedro Martins</td>
-            <td>- Testes de unidade e integração: Jest, Mocha, Chai.</td>
-            <td>Entregue</td>
-          </tr>
-          <tr>
-            <td>- Testes de API: Testes de endpoint.</td>
-            <td>Entregue</td>
-          </tr>
-          <tr>
-            <td colspan="5">
-              - Será disponibilizado em código para exemplos práticos e slides,
-              visando maior integração e dinamismo.
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </main>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/index.css">
+
+  <title>Certificadora Comum - Back-End</title>
+</head>
+<body>
+<header>
+  <nav class="brown lighten-3">
+    <div class="nav-wapper container brand-logo light center">
+
+      <!--Menu-->
+      <ul>
+        <li><a class="link__header" href="index.html">Home</a></li>
+        <li><a class="link__header" href="slides.html">Slides</a></li>
+        <li><a class="link__header" href="index.html">Cronograma</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div class="row">
+  <div class="col s1 m4">
+    <div class="card white darken-1">
+      <div class="card-content black-text">
+        <span class="card-title height-title"><b> Semana 1</b> - Fundamentos de JavaScript</span>
+        <p>Foco na sintaxe do JavaScript, variáveis, tipos de dados, estruturas e funções.
+          Além disso, abordaremos a manipulação do DOM, incluindo seleção de elementos,
+          modificação de conteúdo e manipulação de eventos.</p>
+      </div>
+      <div class="card-action">
+        <a href="apresentacao.html" class="blue-text"><b>ACESSAR CONTEÚDO</b></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s1 m4">
+    <div class="card white darken-1">
+      <div class="card-content black-text">
+        <span class="card-title height-title"><b> Semana 2 </b> - Fundamentos de Banco de Dados e Linguagem SQL</span>
+        <p>Abordar os conceitos básicos de bancos de dados,
+          incluindo a criação, manipulação e consulta de bancos de dados usando a linguagem SQL.</p>
+      </div>
+      <div class="card-action">
+
+        <a href="bancoDados.html" class="blue-text"><b>ACESSAR CONTEÚDO</b></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s1 m4">
+    <div class="card white darken-1">
+      <div class="card-content black-text">
+        <span class="card-title height-title"><b> Semana 3 </b> - Introdução ao Node.js e NPM</span>
+        <p>Introdução do ambiente de execução JavaScript Node.js e o gerenciador de pacotes NPM,
+          que são ferramentas essenciais para o desenvolvimento de aplicações JavaScript modernas/p>
+      </div>
+      <div class="card-action">
+
+        <a href="node.html" class="blue-text"><b>ACESSAR CONTEÚDO</b></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s1 m4">
+    <div class="card white darken-1">
+      <div class="card-content black-text">
+        <span class="card-title height-title"><b> Semana 4 </b> - Express.js e Roteamento</span>
+        <p>Conhecendo o framework Express.js, que é amplamente utilizado para a criação de aplicações web e APIs em Node.js.
+          Também abordaremos o conceito de roteamento, que é fundamental para a construção de aplicações web. </p>
+      </div>
+      <div class="card-action">
+
+        <a href="express.html" class="blue-text"><b>ACESSAR CONTEÚDO</b></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s1 m4">
+    <div class="card white darken-1">
+      <div class="card-content black-text">
+        <span class="card-title height-title"><b> Semana 5 </b> - Persistência de Dados com MongoDB</span>
+        <p>Semana que aborda o banco de dados NoSQL MongoDB, focando em como persistir, recuperar, atualizar e deletar dados.</p>
+      </div>
+      <div class="card-action">
+
+        <a href="mongodb.html" class="blue-text"><b>ACESSAR CONTEÚDO</b></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s1 m4">
+    <div class="card white darken-1">
+      <div class="card-content black-text">
+        <span class="card-title height-title"><b> Semana 6 </b> - Autenticação e Autorização</span>
+        <p>Conceitos de segurança, como autenticação e autorização, que são fundamentais para proteger as aplicações web. </p>
+      </div>
+      <div class="card-action">
+        <a href="autenticacao.html" class="blue-text"><b>ACESSAR CONTEÚDO</b></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s1 m4">
+    <div class="card white darken-1">
+      <div class="card-content black-text">
+        <span class="card-title height-title"><b> Semana 7 </b> - APIs RESTful e Consumo de APIs</span>
+        <p>Criação e consumo de APIs RESTful, que são uma forma comum de comunicação entre aplicações web.</p>
+      </div>
+      <div class="card-action">
+        <a href="apiRest.html" class="blue-text"><b>ACESSAR CONTEÚDO</b></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s1 m4">
+    <div class="card white darken-1">
+      <div class="card-content black-text">
+        <span class="card-title height-title"><b> Semana 8 </b> - Testes de Software</span>
+        <p>Testes de software, abordando diferentes tipos de testes e ferramentas que podem ser usadas para garantir a qualidade do software.</p>
+      </div>
+      <div class="card-action">
+
+        <a href="test.html" class="blue-text"><b>ACESSAR CONTEÚDO</b></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
 </html>

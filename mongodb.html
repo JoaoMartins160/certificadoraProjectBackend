@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programação Web Back-End - Certificadora Comum</title>
-    <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
@@ -14,9 +13,10 @@
             <li><a href="./index.html">Voltar</a></li>
           </ul>
         </nav>
-      </header>
+    </header>
     <h1>MongoDB Tutorial</h1>
 
+    <section>
     <h2>Conceitos Básicos</h2>
     <p>
         MongoDB é um banco de dados NoSQL orientado a documentos. Isso significa que, em vez de armazenar dados em tabelas e linhas como você faria com um banco de dados relacional, o MongoDB armazena dados em documentos BSON,
@@ -34,7 +34,9 @@
         <li>Colunar - A estrutura principal dos bancos colunares é basicamente uma grande tabela. Cada registro pode, ter quantas e quais colunas precisar (schemaless). Os bancos de dados colunares são os que mais se assemelham aos bancos de dados relacionais por terem uma "tabela" na sua estrutura, mesmo que, na verdade, sejam muito diferentes, já que os dados estão orientados a colunas internamente. Um exemplo desse tipo é o Cassandra.</li>
         <li>Documento - O banco de dados de estilo de documento usa o que equivale a um objeto como sua menor unidade lógica. E uma coleção pode conter vários documentos. Por não haver um esquema fixo, cada documento pode ter um número e um tipo de campo diferente, o que contribui para a flexibilidade. Um exemplo desse tipo é MongoDB.</li>
     </ul>
+    </section>
 
+    <section>
     <div class="container">
         <h2>Instalação</h2>
         <p>
@@ -64,7 +66,10 @@
         <p>Já em Diretório de registros, especificamos o diretor de Log. Assim como no diretório de dados, se o diretório não existir, o instalador criará o diretório e configurará o acesso ao diretório para o usuário do serviço.</p>
         <p>Você pode manter as configurações padrão e clicar no botão de Next para prosseguir com a instalação:</p>
         <img class="container-img" src="./img/mongodb/install4.png" alt="MongoDB">
+    </div>
+    </section>
 
+    <section>
         <h2>Criação de um Banco de Dados</h2>
         <p>
             Uma vez instalado, você pode iniciar o MongoDB a partir da linha de comando usando o comando 'mongod'. Em seguida, você pode se conectar ao servidor MongoDB usando o shell MongoDB com o comando 'mongo'. No shell MongoDB, você pode executar comandos para criar bancos de dados, inserir e recuperar dados, e assim por diante.
@@ -138,7 +143,9 @@
             Substitua admin: password pelos dados de username e password que você criou nos passos anteriores, por exemplo, admin:admin123. Clique em Close para fechar a janela.
         </p>
         <img class="container-img" src="./img/mongodb/create_11.png" alt="MongoDB">
+    </section>
 
+    <section>
         <h2>Operações CRUD</h2>
         <p>MongoDB é um banco de dados NoSQL orientado a documentos, o que significa que ele armazena dados em documentos BSON (uma representação binária de JSON).
             As operações CRUD (Create, Read, Update, Delete) são as operações básicas que você pode realizar em um banco de dados MongoDB.</p>
@@ -162,10 +169,10 @@
         <img class="container-img" src="./img/mongodb/crud_3.png" alt="MongoDB">
         <ul>
             <li>
-                Exclusão (Delete): Você pode usar os métodos deleteOne() ou deleteMany() para excluir documentos de uma culeção. Por exemplo:
+                Exclusão (Delete): Você pode usar os métodos deleteOne() ou deleteMany() para excluir documentos de uma coleção.
             </li>
         </ul>
-
+    </section>
         <section id="VideoAula">
             <h2>Vídeo Aula</h2>
             <a href="https://www.youtube.com/watch?v=izZmf5IM8Eg">Link da vídeo aula</a>
